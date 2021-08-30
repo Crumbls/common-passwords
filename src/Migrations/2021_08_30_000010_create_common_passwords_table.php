@@ -24,6 +24,7 @@ class CreateCommonPasswordsTable extends Migration
      */
     public function up(): void {
         Schema::create($this->getTable(), function (Blueprint $table) {
+            $table->id();
             $table->string('password')->unique();
         });
     }

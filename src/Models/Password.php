@@ -11,4 +11,5 @@ use Illuminate\Database\Eloquent\Model;
 class Password extends Model
 {
     protected $table = 'common_passwords';
+    public $timestamps = false;
 }

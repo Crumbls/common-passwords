@@ -41,9 +41,20 @@ class Install extends Command
         /**
          * Run our migration.
          */
-        $this->info('Running migration.');
-        $temp = sprintf('migrate --path=%s', dirname(__DIR__));
-        $response = \Artisan::call($temp);
+
+        $files = glob(dirname(__DIR__).'/Migrations/*.php');
+        $x = count($files);
+        if ($x > 1) {
+            $this->info('Running migrations.');
+        } else if ($x) {
+            $this->info('Running migration.');
+        }
+        $x = strlen(base_path());
+        foreach($files as $file) {
+            $file = substr($file, $x);
+            $temp = sprintf('migrate:refresh --path=%s', $file);
+            $response = \Artisan::call($temp);
+        }
 
         $this->info('Running seeder.');
         $seeder = new CommonPasswordsSeeder();
