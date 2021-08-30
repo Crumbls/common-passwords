@@ -1,0 +1,19 @@
+{
+  "name": "crumbls/common-passwords",
+  "description": "A laravel validation rule to exclude not allow the most common 10,000 passwords and any that you add in.",
+  "type": "library",
+  "require": {
+    "laravel/framework": "^8.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Crumbls\\CommonPasswords\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Chase Miller",
+      "email": "chase@crumbls.com"
+    }
+  ]
+}
