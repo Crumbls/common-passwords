@@ -3,7 +3,7 @@
   "description": "A laravel validation rule to exclude not allow the most common 10,000 passwords and any that you add in.",
   "type": "library",
   "require": {
-    "laravel/framework": "^8.*"
+      "laravel/framework": "^8.0"
   },
   "autoload": {
     "psr-4": {
