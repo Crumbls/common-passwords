@@ -1,7 +1,10 @@
 # common-passwords
 A simple package to validate against common passwords and help keep your application secure.
 
-* Install.  It's not in any repositories yet.
+```shell
+composer require crumbls/common-passwords
+```
+
 * php artisan common-passwords:install
 * Add the \Crumbls\CommonPasswords\Rules\NotCommonPassword() rule to your password field.
    * Best practice says that the best place to do this is to put it into your registration and password recovery validators.  
